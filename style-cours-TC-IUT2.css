@@ -1,0 +1,164 @@
+body {
+	background-color: white;
+	counter-reset: chapitre;
+	font-family: Frutiger, Univers, Arial, Helvetica, sans-serif;
+	margin-left:15em;
+	margin-right:15em;
+    }
+
+body:after{
+    
+    font-size : 1em;
+    font-style : italic;
+    text-align : center;
+    padding-top:2em;
+    content:"Document conçu et réalisé par les enseignants d'informatique du département Techniques de Commercialisation de l'IUT2-Université Grenoble Alpes";
+}
+    
+    
+Title{
+
+	font-size : 4em;
+    text-transform : uppercase;
+	font-style : italic;
+	font-weight : bold;
+    text-align : center;
+	padding-bottom:1em;
+	display:block;
+}
+
+Subtitle{
+
+	font-size : 1.5em;
+    text-align : center;
+	padding-bottom:1em;
+	display:block;
+}
+ 
+ H1:before {
+	
+    counter-increment: chapitre;
+    content:counter(chapitre) " - ";
+}
+
+H1 {
+    font-size : 2em;
+    text-transform : uppercase;
+    text-align : center;
+	padding-bottom:0.5em;
+}
+
+H2 {
+
+    font-size : 1.5em;
+    text-align : center;
+    padding-bottom:0.3em;
+}
+
+H3 {
+
+    font-size : 1em;
+    text-align : center;
+    padding-bottom:0.3em;
+}
+
+p {
+    font-size : 1em;
+    text-align : justify;
+}
+
+question {
+
+font-size : 1em;
+font-style : italic;
+text-align : justify;
+display:block;
+}
+
+answer{
+
+font-size : 1em;
+text-indent : 3em;
+text-align : justify;
+display:block;
+padding-bottom:0.5em;
+}
+
+img{
+	margin: 0 auto; 
+	display:block;
+}
+
+li{
+font-size : 1em;
+text-indent : 1em;
+text-align : justify;
+padding-bottom:0.1em;
+list-style-image : url(computer.png);
+}
+
+puce{
+font-size : 1em;
+text-indent : 1em;
+text-align : justify;
+padding-bottom:1em;
+padding-left:1em;
+display:list-item;
+list-style-type:square;
+}
+
+note:before{
+
+list-style-image: url("TD-Sites-Web_html_1916555a.gif");
+/*WIDTH=50 HEIGHT=50 ALIGN=BOTTOM*/
+
+
+}
+
+.visu {
+background:#F5F5F5 url(Panneau-Attention.gif) no-repeat 1em 1.5em;
+border:0.1em solid #C0C0C0;
+color:#404040;
+padding:0 1em 1em 5em;
+margin:1em 0;
+/*css3*/
+border-radius:1em;
+-moz-border-radius:1em;
+-webkit-border-radius:1em;
+box-shadow:0.3em 0.3em 0.6em 0 #A9A9A9;
+-moz-box-shadow:0.3em 0.3em 0.6em 0 #A9A9A9;
+-webkit-box-shadow:0.3em 0.3em 0.6em #A9A9A9;
+}
+.visu h2, .visu h3, .visu h4 {
+
+text-align : left;
+font-size:110%;
+color:#696969;
+font-style:normal
+}
+
+.visu p{
+
+	font-size : 1em;
+    text-align : justify;
+}
+
+.visu li {
+list-style-image:none !important;
+margin-bottom:0 !important;
+}
+
+.visu .astuce {
+ color:red;
+ font-weight:bold;
+ background-color:transparent;
+ }
+.visu .astuce:before {
+ content:url(images/light_bulb__exclamation.png)
+ }
+.visu .astuce:after {
+ content:" ! "
+ }
+.visu a[hreflang]:after {
+ content: " (" attr(hreflang) ") "; 
+ }

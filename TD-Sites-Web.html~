@@ -1,0 +1,864 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+    <HEAD>
+        <META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=utf-8">
+            <TITLE>Réaliser un site Web</TITLE>
+                                            <link type="text/css" rel="stylesheet" href="style-cours-TC-IUT2.css" />
+                                            </HEAD>
+    <BODY LANG="fr-FR" DIR="LTR">
+        <Title>Réaliser un site Web</Title>
+        <Subtitle>Techniques de Commercialisation</Subtitle>
+        <Subtitle>
+            Problèmes, erreurs, fautes d'orthographes à signaler
+            <A HREF="mailto:belen-alejandra.baez-miranda@iut2.univ-grenoble-alpes.fr" target="blank">ici</A></Subtitle>
+
+        <H1>Objectifs de ce cours, déroulement
+            et notation</H1>
+
+        <question>Quel est l'objectif de ce cours ?</question>
+
+        <answer>L'objectif de ce cours est de connaître, comprendre et
+            savoir utiliser les outils de conception de sites Web.</answer>
+
+        <question>Combien de séances sont prévues ?</question>
+
+        <answer>Deux.</answer>
+
+        <question>Deux séances ? Mais ce TD a l'air assez long. Il va falloir
+            que je travaille entre deux séances ?</question>
+
+        <answer>Oui. En effet, deux
+            séances de TD sont prévues, il vous appartient donc de réaliser
+            de façon autonome ce que vous n'auriez pas eu le temps de faire en
+            cours. En particulier entre les deux séances afin de pouvoir poser
+            des questions à votre enseignant.
+        </answer>
+
+        <question>Il paraît qu'il n'y aura pas de contrôle final, est-ce vrai ?</question>
+
+        <answer>Oui. Vous serez notés sur la réalisation individuelle de
+            projets. En ce qui concerne plus particulièrement cette partie du
+            cours, vous devrez réaliser un site Web concernant une entreprise fictive.
+            Vous aurez une soutenance d'une dizaine de minute à réaliser en
+            salle machine devant un ou plusieurs des enseignants d'informatique.
+            La date et les modalités des soutenances vous seront données
+            ultérieurement.</answer>
+
+        <question>Comment puis-je poser des questions en dehors des séances ?</question>
+
+        <answer>Comme d'habitude, en envoyant un courrier électronique à
+            votre enseignant</answer>
+
+        <question>Pourquoi me demander de ne pas imprimer ce
+            document ?</question>
+
+        <answer>Parce que le document
+            évoluera certainement en fonction des erreurs, tournures
+            hasardeuses et des fautes d'orthographes ; parce qu'il
+            contient des liens hypertextes et que le papier ne permet pas encore
+            de suivre les liens hypertextes quoi qu'aujourd'hui,
+            il suffise d'un téléphone...</answer>
+
+
+        <H1>Une
+            page Web Simple</H1>
+        <P>
+        Au tournant des années 1990, Internet existe depuis déjà 20 ans
+        mais est encore principalement réservé aux militaires et aux
+        universitaires. Il offre pourtant déjà la plupart des services que
+        nous connaissons comme la messagerie électronique (<I>mail</I>), la
+        messagerie instantanée (<I>chat</I>), le transferts de fichiers
+        (<I>ftp</I>) mais leurs interfaces sont alors très sommaires voire
+        inexistantes. Un nouveau service, inventé au Centre Européen pour
+        la Recherche Nucléaire (CERN) à la frontière franco-Suisse par Tim
+        Berners-Lee, va révolutionner l'Internet et le démocratiser : le
+        Web.
+        </P>
+        <P>Le Web est constitué de pages. Que sont ces pages ?</P>
+
+        <UL>
+            <LI>Ouvrez un
+                traitement de texte relativement simple (le bloc note par exemple)
+                <LI>Recopiez le
+                    texte suivant (les sauts de ligne, les tabulations sont
+                    optionnelles) :
+                    </UL>
+        <!--<P STYLE="margin-left: 2cm; margin-right: 1cm; margin-top: 0.2cm; margin-bottom: 0.2cm; background: transparent; border: 1px solid #000000; padding: 0.05cm; widows: 2; orphans: 2; page-break-before: auto"><A NAME="line1"></A>
+         <FONT COLOR="#808080"><FONT FACE="Arial, sans-serif"><FONT SIZE=2>&lt;html&gt;<BR>	&lt;head&gt;<BR>		&lt;title&gt;Ma
+         première page Web&lt;/title&gt;<BR>	&lt;/head&gt;<BR>	&lt;body&gt;<BR>		Bonjour
+         le monde<BR>	&lt;/body&gt;<BR>&lt;/html&gt;</FONT></FONT></FONT></P>-->
+
+        <IMG SRC="Bonjour-le-Monde.png" NAME="Bonjour-le-Monde" ALIGN=CENTER WIDTH=40% BORDER=0>
+
+            <UL>
+                <LI>Enregistrez
+                    le document au format texte (.txt) mais donnez l'extension .html.
+                    Appellez-le <I>Bonjour.html</I></LI>
+                <LI>Ouvrez-le avec le navigateur Web Mozilla Firefox. Vous devriez obtenir une page dont le titre est <I>Ma première page Web</I>
+                    et qui affiche <I>Bonjour le monde</I>.</LI>
+            </UL>
+            <p>Vous venez de créer une page Web. Elle est écrite dans le langage
+            HTML (Hypertext Markup Language)  qui est un langage de balisage
+            c'est-à-dire que, comme des parenthèses, si vous avez une balise
+            ouvrante (par exemple, <I>&lt;html&gt;</I>) vous avez une balise
+            fermante (ex : <I>&lt;/html&gt;</I>).</p>
+            <UL>
+                <LI>Identifiez
+                    les différentes balises de <I>Bonjour.html</I> et dites à quoi elles correspondent.</LI>
+            </UL>
+
+            <div class="visu">
+                <H3>À Retenir</H3>
+                <p>Une page Web est simplement du texte brut écrit dans le langage HTML
+                qui va être interprété par un navigateur Web afin d'être affiché.</p>
+                <P>Les balises vont toujours par paires à une ouvrante correspond une
+                fermante, elles sont organisées en  dernière ouverte première
+                fermée (équivalent à dernier entrant, premier sortant DEPS, LIFO).</P>
+            </div>
+
+            <P>
+            Une page seule a peu d'intérêt alors</P>
+            <UL>
+                <LI>créez-en une
+                    seconde. Il faut que son nom soit différent de celui de la première
+                    et que les deux soient dans le même répertoire. Pour gagner du
+                    temps, vous pouvez copier le contenu de la première page dans un
+                    nouveau fichier et ensuite le modifier.</LI>
+            </UL>
+
+            <!--<P STYLE="margin-left: 2cm; margin-right: 1cm; margin-top: 0.2cm; margin-bottom: 0.2cm; background: transparent; border: 1px solid #000000; padding: 0.05cm; widows: 2; orphans: 2; page-break-before: auto">
+             <FONT COLOR="#808080"><FONT FACE="Arial, sans-serif"><FONT SIZE=2>&lt;html&gt;<BR>	&lt;head&gt;<BR>		&lt;title&gt;Ma
+             deuxième page Web&lt;/title&gt;<BR>	&lt;/head&gt;<BR>	&lt;body&gt;<BR>		Bonjour.
+             Où puis-je dire bonjour au monde ? &lt;a href=&quot;Bonjour.html&quot;&gt;Ici&lt;/a&gt;
+             <BR>	&lt;/body&gt;<BR>&lt;/html&gt;</FONT></FONT></FONT></P>-->
+
+            <IMG SRC="Deuxieme-page.png" NAME="Deuxieme-page" ALIGN=CENTER WIDTH=100% BORDER=0>
+
+                <UL>
+                    <LI>Ouvrez cette
+                        nouvelle page avec un navigateur. Observez le mot <I>ici</I>.
+                        Cliquez dessus.</LI>
+                </UL>
+
+                <div class="visu">
+                    <H3>En savoir plus</H3>
+                    <P>
+                    En Décembre 2011, les 5 navigateurs Web les plus utilisés sont
+                    (<A HREF="http://gs.statcounter.com/#browser-ww-monthly-201012-201012-bar" target="blank">source</A>)
+                    :</P>
+                    <P>
+                    <A HREF="http://www.opera.com/browser/" target="blank"><IMG SRC="TD-Sites-Web_html_6571fb3.gif" NAME="HTTP://WWW.OPERA.COM/BROWSER/" ALIGN=LEFT WIDTH=5% BORDER=0></A> Opera
+                    11 (part de marché 2%)</P>
+                    <P>
+                    <A HREF="http://www.apple.com/fr/safari/" target="blank"><IMG SRC="TD-Sites-Web_html_503981f7.png" NAME="HTTP://WWW.APPLE.COM/FR/SAFARI/"  ALIGN=LEFT WIDTH=5% BORDER=0></A>Apple
+                    Safari 5 (pdm 6%)</P>
+                    <P>
+                    <A HREF="http://www.mozilla-europe.org/fr/firefox/" target="blank"><IMG SRC="TD-Sites-Web_html_675359c5.png" NAME="HTTP://WWW.MOZILLA-EUROPE.ORG/FR/FIREFOX/"  ALIGN=LEFT WIDTH=5% BORDER=0></A>Mozilla
+                    Firefox 9, libre, gratuit et multiplateforme (pdm 25%)</P>
+                    <P><A HREF="https://www.google.com/chrome/" target="blank"><IMG SRC="TD-Sites-Web_html_m33457f86.gif" NAME="HTTP://WWW.GOOGLE.COM/CHROME"  ALIGN=LEFT WIDTH=5% BORDER=0></A>Google
+                    Chrome 16 (pdm 28%)</P>
+                    <p>
+                    <A HREF="http://www.microsoft.com/france/windows/internet-explorer/telecharger-ie9.aspx" target="blank"><IMG SRC="TD-Sites-Web_html_25e46ee4.png" NAME="HTTP://WWW.MICROSOFT.COM/FRANCE/WINDOWS/INTERNET-EXPLORER/TELECHARGER-IE8.ASPX"  ALIGN=LEFT WIDTH=5% BORDER=0></A>Microsoft
+                    Windows Internet Explorer 8 qui est <A HREF="http://www.clubic.com/article-282232-1-comparatif-internet-explorer-firefox-opera-safari.html" target="blank">actuellement
+                        le plus mauvais</A> et le plus utilisé des navigateurs (pdm 39% pic
+                    à 95% en 2002-2003)</P>
+                    <P>
+                    Une répartition différente sur dispositif mobiles (<A HREF="http://gs.statcounter.com/#mobile_browser-ww-monthly-201112-201112-bar" target="blank">source</A>)</P>
+                    <P>
+                    <IMG SRC="TD-Sites-Web_html_aac5f3a.png" NAME="images9"  ALIGN=LEFT WIDTH=5% BORDER=0>Android
+                        (pdm 20%)</P>
+                        <P>
+                        <IMG SRC="TD-Sites-Web_html_7f4a7fb5.gif" NAME="images8"  ALIGN=LEFT WIDTH=5% BORDER=0>
+                            Nokia (pdm 13%)</P>
+                            <P>
+                            <A HREF="http://fr.blackberry.com/" target="blank"><IMG SRC="TD-Sites-Web_html_m62c758c3.gif" NAME="HTTP://FR.BLACKBERRY.COM/"  ALIGN=LEFT WIDTH=5% BORDER=0></A>BlackBerry
+                            (pdm 8%)</P>
+                            <P>
+                            <A HREF="http://www.opera.com/mobile/" target="blank"><IMG SRC="TD-Sites-Web_html_6571fb3.gif" NAME="HTTP://WWW.OPERA.COM/MOBILE/"  ALIGN=LEFT WIDTH=5% BORDER=0></A>Opera
+                            (pdm 24%)</P>
+                            <P>
+                            <A HREF="http://www.apple.com/fr/safari/" target="blank"><IMG SRC="TD-Sites-Web_html_503981f7.png" NAME="images4"  ALIGN=LEFT WIDTH=5% BORDER=0></A>Apple
+                            safari (pdm 22%)</P>
+                            </div>
+
+                <P>
+                Il s'agit d'un lien hypertexte (ou hyperlien) qui permet, ici de
+                passer d'une page à une autre. Il sont l'essence du Web et rendent
+                également possible le passage vers d'autres services comme le
+                courrier électronique ou le transfert de fichier par un simple clic
+                de souris. Ce sont eux, également, qui permettent l'affichage de
+                photos et autres ressources multimédias.
+                </P>
+
+                <div class="visu">
+                    <H3>En savoir plus</H3>
+                    <P>Grâce
+                    aux liens hypertextes, on va passer en un peu plus de 5 ans de 100
+                    000 à 10 000 000 machines sur Internet. L'idée
+                    ne vient pourtant pas du Web puisqu'elle date de...<A HREF="http://fr.wikipedia.org/wiki/Hypertexte"  target="blank">1945</A>
+                    pour la gestion des microfilms</P>
+                </div>
+
+
+                <P>Le langage HTML est relativement simple, il permet à un non
+                informaticien de réaliser une page Web. Il suffit de décrire le
+                contenu et la forme de la page.</P>
+                <UL>
+                    <LI>Reprenez
+                        votre première page et modifiez là en mettant une balise <I>B</I>
+                        autour de monde.</LI></UL>
+                <!--<P STYLE="margin-left: 2cm; margin-right: 1cm; margin-top: 0.2cm; margin-bottom: 0.2cm; background: transparent; border: 1px solid #000000; padding: 0.05cm; font-style: normal; widows: 2; orphans: 2; page-break-before: auto">
+                 <FONT COLOR="#808080" FACE="Arial, sans-serif" SIZE=2>&lt;html&gt;<BR>	&lt;head&gt;<BR>		&lt;title&gt;Ma
+                 première page Web&lt;/title&gt;<BR>	&lt;/head&gt;<BR>	&lt;body&gt;<BR>		Bonjour
+                 le &lt;B&gt;monde&lt;/B&gt;<BR>	&lt;/body&gt;<BR>&lt;/html&gt;</FONT></P>-->
+
+                <IMG SRC="Bonjour-gras.png" NAME="Bonjour-gras" ALIGN=CENTER WIDTH=40% BORDER=0>
+
+
+                    <UL>
+                        <LI>À quoi sert
+                            la balise <I>&lt;B&gt;</I> ?
+                            Remplacez <I>B</I> par <I>I</I> (la lettre i).
+                            À quoi sert la balise <I>I</I>
+                            ? Modifiez votre programme pour que le mot <I>Bonjour</I>
+                            apparaisse en gras italique.</LI>
+                    </UL>
+
+                    <div class="visu">
+                        <H3>À retenir</H3>
+                        <P><I>&lt;HEAD&gt;</I>: contient les
+                        informations sur la page comme le titre par exemple</P>
+                        <P>
+                        <I>&lt;BODY&gt;: </I>le corps de la
+                        page, ce qui s'affiche dans la fenêtre</P>
+                        <P>
+                        Même si la plupart des navigateurs
+                        sont permissif, il vaut toujours mieux respecter les conventions et
+                        une page Web doit avoir <B>une
+                            seule tête</B> et <B>un
+                                seul corps</b>.
+                        <P>
+                        En résumé, le squelette d'une page Web devrait être
+
+                        <!--<P LANG="zxx" ALIGN=JUSTIFY STYLE="margin-bottom: 0cm; border: 1px solid #000000; padding: 0.05cm; font-weight: normal; page-break-inside: avoid; widows: 0; orphans: 0; page-break-before: auto; page-break-after: auto">
+                         <FONT COLOR="#808080" FACE="Arial, sans-serif" SIZE=2>
+                         <I>&lt;html&gt;</I>
+                         <BR/><I>	&lt;head&gt;</I>
+                         <BR/><I>		&lt;title&gt;&lt;/title&gt;</I>
+                         <BR/><I>	&lt;/head&gt;</I>
+                         <BR/><I>	&lt;body&gt;</I>
+                         <BR/><I>	&lt;/body&gt;</I>
+                         <BR/><I>&lt;/html&gt;</I></P></font>-->
+
+                        <IMG SRC="squelette-HTML.png" NAME="squelette-HTML" ALIGN=CENTER WIDTH=25% BORDER=0>
+
+                            </div>
+
+                    <UL>
+                        <LI><P CLASS="puce-1-western" STYLE="text-indent: 0cm; font-style: normal">
+                            Modifiez le corps de votre page pour rajouter des titres</P>
+                            </UL>
+
+                    <!--<P STYLE="margin-left: 2cm; margin-right: 1cm; margin-top: 0.2cm; margin-bottom: 0.2cm; background: transparent; border: 1px solid #000000; padding: 0.05cm; font-style: normal; widows: 2; orphans: 2; page-break-before: auto">
+                     <FONT COLOR="#808080"><FONT FACE="Arial, sans-serif"><FONT SIZE=2>	&lt;H1&gt;Titres
+                     de niveau 1&lt;/H1&gt;<BR>	&lt;H2&gt;Titres de niveau
+                     2&lt;/H2&gt;<BR>	&lt;H3&gt;Titres de niveau 3&lt;/H3&gt;</FONT></FONT></FONT></P>
+                     <P LANG="zxx" ALIGN=JUSTIFY STYLE="margin-top: 0.2cm; margin-bottom: 0.2cm; font-style: normal">-->
+                    <IMG SRC="Titres.png" NAME="Titres" ALIGN=CENTER WIDTH=25% BORDER=0>
+
+                        On peut définir des titres jusqu'au niveau 6. De même, les
+                        paragraphes sont gérés avec la balise <I>&lt;p&gt;</I> (et bien sûr son pendant, <I>&lt;/p&gt;</I>).</P>
+
+                        <div class="visu">
+                            <H3>En savoir plus</H3>
+                            <P>La première page Web aurait été consultée le jour de Noël 1990.</P>
+                            <P>Et voici à quoi ressemblait le premier navigateur qui fonctionnait
+                            sur ordinateur <A HREF="http://fr.wikipedia.org/wiki/NeXT"  target="blank">NeXT</A>
+                            (l'ancêtre des ordinateurs actuels d'Apple)</P>
+                            <p><IMG SRC="TD-Sites-Web_html_m763c149a.gif" NAME="images7" ALIGN=CENTER WIDTH=100% BORDER=0></p>
+                                </div>
+
+                        <P>
+                        Les balises ont parfois des attributs. Par exemple pour <I>&lt;a
+                            href=&quot;Bonjour.html&quot;&gt;,</I> la balise <I>&lt;a&gt;</I> qui
+                        définit les liens hypertextes a comme attribut <I>href </I>qui donne
+                        la cible du lien
+                        </P>
+
+                        <div class="visu">
+                            <H3>À retenir</H3>
+                            <P>
+                            La structure d'une balise ouvrante avec un attribut est de la forme :</P>
+                            <P>
+                            &lt;<I>nomBalise attribut</I>=&quot;<I>valeur
+                                attribut</I>&quot;&gt;</P>
+                            <P>
+                            Il est possible d'avoir plusieurs attributs à la suite séparés par
+                            des espaces	</P>
+                            <P>
+                            Par exemple, <I>&lt;a href=&quot;Bonjour.html&quot; target=&quot;_BLANK&quot;&gt;</I>
+                            signifie que pour la balise<I> &lt;a&gt; </I>l'attribut<I> href </I>a
+                            la valeur<I> Bonjour.html (la page cible) </I>et l'attibut<I> target
+                            </I>est la fenêtre cible<I> (</I>avec<I> _BLANK, </I>une nouvelle).</P>
+                            <P>
+                            La structure d'une balise fermante est plus simple</P>
+                            <P>
+                            Par exemple,<I> &lt;/body&gt;</I></P>
+                            <P>
+                            On trouvera <A HREF="http://www.codeshttp.com/baliseh.htm"  target="blank">ici</A>
+                            une liste des balises et des attributs associés</P>
+                        </div>
+                        <P>
+                        Ces attributs permettent aussi de gérer l'apparence générale de la
+                        page par exemple :</P>
+                        <puce><p>pour les caractères (<I>&lt;font&gt;</I>)
+                            il est possible de modifier</P>
+                            <puce>la taille avec l'attribut size (exprimée en points pts ; par ex.
+                                &lt;font size = &quot;5&quot;&gt;) ;</puce>
+                            <puce>la couleur avec l'attribut <I>color</I>
+                                (noms en anglais ; par ex. <I>&lt;font color = &quot;white&quot;&gt;</I>)
+                                ;</puce>
+                            <puce>la police avec l'attribut <I>face
+                            </I>(par ex. <I>&lt;font
+                                face = &quot;Comic Sans MS&quot;&gt;</I>)</puce>
+                        </puce>
+                        <PUCE>pour les paragraphes (<I>&lt;p&gt;</I>),
+                            il est possible de modifier l'alignement avec <I>align</I>
+                            (<I>left</I>, <I>right</I>,
+                            <I>center</I>, <I>justify</I>;
+                            par ex. <I>&lt;p align=&quot;left&quot;&gt;</I>)</puce>
+                        <puce>
+                            pour le corps de la page Web
+                            (&lt;body&gt;), la couleur du fond peut être modifiée grâce à
+                            l'attribut <I>bgcolor</I>
+                            (par ex. <I>&lt;body bgcolor=&quot;white&quot;&gt;</I>)</puce>
+
+                        <UL>
+                            <LI><P>Réalisez la
+                                page suivante en utilisant des balises de paragraphe et pas des
+                                titres</P>
+                                </UL>
+                        <p>
+                        <IMG SRC="TD-Sites-Web_html_4dd56cb4.gif" NAME="images1" ALIGN=CENTER WIDTH=77% WIDTH=100% BORDER=0></p>
+                            <!--<p>Voici
+                             la page <A HREF="http://atoum.imag.fr/geta/User/didier.schwab/IUT/formatage.html">Web
+                             correspondante</A>.</P>-->
+                            <div class="visu">
+                                <H3>À retenir</H3>
+                                <P>
+                                HTML permet de décrire à la fois le contenu et l'apparence d'une
+                                page Web</P>
+                            </div>
+                            <P>
+                            Lorsque l'on conçoit un site relativement grand, gérer des fichiers
+                            textes et leur cohérence devient rapidement compliqué.
+                            </P>
+                            <UL>
+                                <LI><P>Allez sur
+                                    <A HREF="http://fr.wikipedia.org/"  target="blank">http://fr.wikipedia.org</A> .</P>
+                                    <LI><P>Allez
+                                        regarder le code source de la page (<I>Clic droit&gt;Code source de
+                                            la page</I>)</P>
+                                        <LI><P>Observez la
+                                            complexité du code mais essayez de repérer des balises déjà
+                                            connues.</P>
+                                            </UL>
+                            <P>
+                            Pour gérer de tels sites, dès le milieu des années 1990, des
+                            outils encore plus simples à utiliser ont été mis en place même
+                            si des notions de HTML restent encore indispensables à l'écriture
+                            de sites Web.</P>
+                            <div class="visu">
+                                <H3>À retenir</H3>
+                                <P>
+                                Pour être parfaitement lu par un navigateur, les lettres accentuées
+                                et les symboles sont codés. Ce code commence toujours par une
+                                esperluette (<I>&amp;</I>) et
+                                finit toujours par un point virgule (<I>;</I>).Par exemple, <I>é</I> pour
+                                <I>&amp;eacute; et è pour &amp;egrave;  </I>On
+                                trouvera l'ensemble de ces symboles <A HREF="http://www.w3schools.com/charsets/ref_html_entities_e.asp"  target="blank">ici</A>
+                                </P>
+                            </div>
+
+                            <div class="visu">
+                                <H3>À retenir</H3>
+                                <P>
+                                Il existe de nombreux tutoriaux en ligne sur le HTML, par exemple,
+                                <A HREF="http://fr.html.net/tutorials/html"  target="blank">celui-ci</A>.</P>
+                            </div>
+                            <H1>Les
+                                éditeurs de site Web WYSIWYG</H1>
+                            <P>
+                            Les logiciels WYSIWYG (What you see is what you get, vous obtenez ce
+                            que vous voyez) sont les logiciels pour lesquels l'utilisateur voit
+                            directement ce qu'il obtiendra : <I>Writer</I> ou <I>Impress</I> en
+                            sont des exemples, vous pouvez voir, en même temps que vous la
+                            réalisez votre présentation sous <I>Impress</I> ou votre mémoire
+                            avec <I>Writer</I>.</P>
+
+                            <div class="visu">
+                                <H3>En savoir plus</H3>
+
+                                <P>
+                                En ce qui concerne le Web, <I>Adobe Dreamweaver</I>, <I>Microsoft
+                                    Expression Web</I>, <I>Apple iWeb</I> en logiciels propriétaires et
+                                <I>Mozilla Compozer</I> ou <I>BlueGriffon</I> en logiciel libres
+                                permettent l'édition en WYSIWYG.</P>
+                                <P>
+                                Writer permet également de réaliser de petits sites.</P>
+                            </div>
+                            <UL>
+                                <LI><P>
+                                    Avec LibreOffice Writer créez un document texte</P>
+                                    <LI><P>
+                                        Reproduisez la page <A HREF="http://atoum.imag.fr/geta/User/didier.schwab/IUT/formatage.html"  target="blank"><I>Mon
+                                            petit formatage</I></A> de la partie précédente.</P>
+                                        <LI><P>
+                                            Enregistrez le document au format HTML, ouvrez le avec un navigateur.</P>
+                                            <LI><P>Regardez
+                                                le code HTML généré par writer (clic droit puis code source de la page)</P>
+                                                </UL>
+                            <P>Ce type de logiciel a toutefois quelques limites :</P>
+
+                            <puce>
+                                Il gère peu la cohérence graphique. Writer peut évidement
+                                utiliser la notion de style mais ce n'est pas un standard du Web, si
+                                vous rouvrez la page HTML avec une autre instance de Writer (un
+                                Writer installé sur une autre machine par exemple), vous n'aurez
+                                plus vos styles</puce>
+                            <puce>
+                                Il faut gérer toute la partie envoi des fichiers sur le serveur</puce>
+                            <H1>Les systèmes de gestion de contenu</H1>
+                            <P>
+                            Généralement appelés par leur accronyme anglais CMS (<I>Content
+                                Management System</I>). Comme leur nom l'indique, les utilisateurs
+                            n'ont qu'à gérer le contenu et ne se préoccupent pas du stockage
+                            ni de la cohérence graphique. Pour un utilisateur lambda, il s'agit
+                            d'un site Web pour lequel il peut créer et/ou éditer des pages.
+                            Vous en utilisez un depuis que vous êtes à l'iut l'intratek.</P>
+                            <UL>
+                                        <LI><P>Connectez-vous
+                                            sur l'intranet et allez dans <I>enseignement&gt;informatique&gt;Web</I></P>
+                                            <LI><P>
+                                                Créez une nouvelle page</P>
+                                                <LI><P>
+                                                    Dans le formulaire, mettez un titre à votre page (<A HREF="http://atoum.imag.fr/geta/User/didier.schwab/IUT/formatage.html" target="blank"><I>Mon
+                                                        petit formatage</I></A>)</P>
+                                                    <LI><P>
+                                                        Observer les différents menus dans la barre et formatez votre page
+                                                        pour qu'elle soit le plus proche possible de la page Web réalisée
+                                                        précédemment</P>
+                                                        <LI><P>
+                                                            Passez du mode code html au mode wysiwyg. Modifiez le code HTML et
+                                                            vérifiez le résultat</P>
+                                                            <LI><P>
+                                                                Publiez votre page</P>
+                                                                </UL>
+                            <div class="visu">
+                                <H3>En savoir plus</H3>
+                                <P>
+                                Il existe des milliers de CMS. Bien entendu tous n'ont pas les mêmes
+                                fonctionnalités, la même simplicité, les mêmes usages le même
+                                prix et ils ne sont pas tous très populaires. Le site
+                                <A HREF="http://www.cmsmatrix.org/"  target="blank">http://www.cmsmatrix.org/</A>
+                                permettait d'en tester 1212 le 10 janvier 2012.</P>
+                            </div>
+
+                            <H1>Weebly</H1>
+
+                                <P>
+                                Weebly est l'un des nombreux CMS que l'on peut trouver sur le Web. Il
+                                a deux principaux avantages, il offre un hébergement gratuit du site
+                                et son utilisation WISIWYG est particulièrement poussée.</P>
+                                <P>
+                                C'est avec ce CMS que vous devrez concevoir un site Web cette année.
+                                Ici, nous allons réaliser un petit site Web sur le département
+                                Techniques de Commercialisation.</P>
+                                <P>
+                                <B>Rappel</B> : votre navigateur <B>doit être</B> Mozilla Firefox</P>
+                                <UL>
+                                    <LI>Allez
+                                        sur le site de Weebly et cliquez sur "S'inscrire" (coin en haut à droite de l'écran)  (<A HREF="https://www.weebly.com/fr"  target="blank">https://www.weebly.com/fr</A>)</LI>
+                                        <p><IMG SRC="weebly0.png" NAME="images2" ALIGN=center WIDTH=50%  BORDER=0></p>
+                                    <LI>Remplissez le formulaire </LI>
+                                        <p><IMG SRC="weebly1.png" NAME="formulaireInscription" ALIGN=center WIDTH=50%  BORDER=0></p>
+                                     
+                                    <LI>Une fois la fenêtre "Souhaitez-vous vendre des produits en ligne?", sélectionnez "Pas maintenant" </LI>
+                                        <p><IMG SRC="weebly3.png" NAME="formulaireInscription" ALIGN=center WIDTH=40%  BORDER=1></p>
+                                    <LI>Séléctionnez un modèle autre que "Sol de terrace" et après cliquer sur "Commerncer l'édition"</LI>
+                                        <p><IMG SRC="weebly4.png" NAME="formulaireInscription" ALIGN=center WIDTH=50%  BORDER=0></p>
+                                    <LI>Choississez
+                                        un sous-domaine que vous nommerez TC suivi de votre nom de famille
+                                        et de votre prénom et cliquez sur "Continuer"</LI> 
+													<p><IMG SRC="weebly5.png" NAME="formulaireInscription" ALIGN=center WIDTH=50%  BORDER=0></p>
+												<LI>Donnez un titre à votre site (<I>Site
+                                            Web TC</I>) et cliquez sur "Continuer"</LI>
+                                    </UL>
+                                <P>
+                                Vous êtes maintenant sur la page d'édition. C'est ici que vous
+                                allez construire les pages de votre site. Weebly permet au créateur du site web de glisser-déposer des blocs contenant des fonctionnalités ou sections. Ainsi, il faudra que décider ce qu'on veut ajouter ainsi que son lieu sur la page. La plupart de modèles ont déjà un format prédefini (couleurs, polices, etc..). Toutefois, ils permettent de les modifier pour avoir un résultat plus personalisé. Par défault, elle travaille d'abord sur la page d'accueil, c'est à dire la première page que les personnes vont regarder. Pour modifier une autre, il faut aller sur l'onglet "Pages" (Menu supérieur), cliquer sur celle à éditer et cliquer encore une fois sur "Construire" (Menu supérieur) pour retourner sur l'espace d'édition. </P>  
+</UL>
+<LI>Les options pour modifier le contenu du site se trouvent au côté gauche. Prenez un peu du temps pour les explorer</LI> 
+													<p><IMG SRC="editionWeebly.png" NAME="formulaireInscription" ALIGN=center WIDTH=50%  BORDER=0></p>
+
+<P>Nous allons créer ici un
+                                petit site sur le département techniques de commercialisation.  </P>
+                                
+                                <P>
+                                Il faut définir l'ensemble des pages dont on aura besoin et leur
+                                organisation</P>
+                                <UL>
+                                    <LI>Définissez
+                                        l’arborescence pour qu'elle soit identique à celle ci-dessous (carré rouge).
+                                        Ici, le site est composé de trois pages principales (accueil,
+                                        Première année, Deuxième année) et de six &quot;sous-pages
+                                        (faire glisser les pages vers la droite pour en faire
+                                        dessous-pages).</LI>
+                                </UL>
+
+                                <IMG SRC="arborescenceWeebly.png" NAME="images3" ALIGN=CENTER WIDTH=100% BORDER=0>
+
+                                    <UL>
+                                     
+                                        <P>Il faut
+                                        maintenant mettre du contenu dans ces pages, éditer le site. Nous
+                                        commençons par la page d'accueil.</LI>
+                                        <LI>Allez sur la
+                                            page d'accueil</LI>
+                                        <LI>Le ménu à gauche vous permet de déposer des éléments sur
+                                            votre page (texte en colonnes, image…)</LI>
+                                        
+                                        <LI>Réalisez la page d'accueil suivante contenant les informations de l'image. Vous devez chercher le logo du Dépt. Tech de Co de l'IUT2 et de rajouter le lien hypertexte <A HREF="https://iut2.univ-grenoble-alpes.fr/"  target="blank">https://iut2.univ-grenoble-alpes.fr/</A>  au mot "ici"
+                                            (site de l'IUT). Le formattage peut varier selon le modèle élu </LI>
+<IMG SRC="accueilIUT.png" NAME="images3" ALIGN=CENTER WIDTH=50% BORDER=1>                              
+													
+													           
+													<LI>Vous
+                                            cliquerez sur «&nbsp;publier&nbsp;» (Coin supérieur droit) pour mettre votre site à
+                                            jour. Vous pouvez visiter le site et voir le résultat de vos modifications</LI>
+                                    </UL>
+accueilIUT
+                                   
+
+                                        Après la page d'accueil, nous passons à la sous-page «&nbsp;Nous
+                                        contacter&nbsp;» où nous allons mettre le formulaire suivant</P>
+                                        <UL>
+                                            <LI>Insérer un
+                                                élément formulaire dans la page (<I> Menu côté gauche > Basique > 
+                                                    &gt; Formulaires de contact</I>)
+                                            </LI>
+                                        </UL>
+
+                                        <IMG SRC="formulaireWeebly.png" NAME="images3" ALIGN=CENTER WIDTH=50% BORDER=1>
+
+                                            <UL>
+                                                <LI>
+                                                    Vérifiez que le formulaire est envoyé à votre adresse (cliquer sur bouton
+                                                    form options) et vous rajouterez « vous êtes intéressé(e)
+                                                    par » en indiquant les différentes modalités (vous
+                                                    utiliserez options boutons</LI>
+                                                <LI>
+                                                    Dans les autres pages insérez des galeries de photo, des vidéos,
+                                                    des sondages en ligne en formulant des questions avec des cases à
+                                                    cocher et des boutons d’options, des mots croisés</LI>
+                                            </UL>
+
+                                            <H1>Les CSS</H1>
+
+                                            <P>Dès 1994, il est devenu clair que maintenir l'identité graphique
+                                            d'un site Web était compliqué. Imaginez le reponsable du site Web
+                                            d'un journal devoir systématiquement insérer le titre du journal,
+                                            régler les couleurs, la taille des titres et du texte.
+                                            </P>
+                                            <UL>
+                                                <LI>Dans Weebly, changez de thème</LI>
+                                                <LI>Qu'observez-vous ?</LI>
+                                            </UL>
+                                            <P>Le contenu n'a pas été modifié alors que la charte graphique
+                                            est complètement différente.</P>
+                                            <P>Comment expliquer cette possibilité alors que nous avons vu que
+                                            le HTML permet
+                                            de décrire à la fois le contenu et l'apparence d'une page Web ?
+                                            Simplement en enlevant du code HTML les informations du formatage.
+                                            Ainsi sont nées les CSS (Cascading Style Sheets : Feuilles de style
+                                            en cascade)</P>
+
+                                            <div class="visu">
+                                                <H3>À retenir</H3>
+                                                <P>
+                                                Les CSS jouent un rôle équivalent au masque d'une présentation et
+                                                aux styles d'un traitement de texte.</P>
+                                                <P>
+                                                Au HTML le soin de gérer le <B>contenu </B>, le<B> fond</B></P>
+                                                <P>
+                                                Au CSS le soin de gérer le <B>formatage</B>, la <B>forme</B></P>
+                                            </div>
+
+                                            <UL>
+                                                <LI>
+                                                    Laissez de côté Weebly et revenez dans le système de fichier de
+                                                    votre ordinateur.</LI>
+                                                <LI>Créez un répertoire (un dossier) appelé <I>test-CSS</I>.</LI>
+                                                <LI>Enregistrez <A HREF="http://atoum.imag.fr/geta/User/didier.schwab/IUT/test-css.html"> ce
+                                                    fichier</A> dans le
+                                                    répertoire puis ouvrez-le avec le bloc-note.</LI>
+                                                <LI>
+                                                    Ouvrez ce fichier avec votre navigateur, lisez le poème, observez
+                                                    sa forme</LI>
+                                                <LI>Dans
+                                                    le répertoire où vous avez téléchargé ce fichier, créez un
+                                                    second fichier, appelez-le <I>style.css</I> et
+                                                    recopiez</LI>
+                                            </UL>
+
+                                            <IMG SRC="premier-css.png" NAME="premier-css" ALIGN=CENTER WIDTH=30% BORDER=0>
+
+                                                <P>Maintenant, nous allons indiquer dans
+                                                le fichier HTML (test-CSS.html) où aller chercher la feuille de
+                                                style</P>
+                                                <UL>
+                                                    <LI>Dans la tête du fichier HTML,
+                                                        insérez</LI>
+                                                </UL>
+
+
+                                                <IMG SRC="en-tete-css.png" NAME="en-tete-css" ALIGN=CENTER WIDTH=45% BORDER=0>
+
+                                                    <UL>
+                                                        <LI>Visualisez le résultat dans votre
+                                                            navigateur, observez sa forme. Quelle est la différence ?</LI>
+                                                    </UL>
+                                                    <P>Pourquoi ? Analysons ce que nous
+                                                    avons écrit dans le fichier CSS : <I>body </I> est
+                                                    l'élément HTML que l'on souhaite formater et entre les accolades
+                                                    <I>background-color,</I> la
+                                                    couleur du fond qui sera donc vert clair.</P>
+
+                                                    <div class="visu">
+                                                        <H3>À retenir</H3>
+                                                        <P>
+                                                        Les éléments d'un fichier CSS ont la syntaxe suivante :</P>
+                                                        <P>
+                                                        <FONT COLOR="#00ae00">sélecteur</FONT>
+                                                        {
+                                                        <BR/>
+                                                        <FONT COLOR="#ff0000">propriété<SUB>1</SUB></FONT>
+                                                        : <FONT COLOR="#2323dc">valeur<SUB>1</SUB></FONT>;
+                                                        <BR/>
+                                                        <FONT COLOR="#ff0000">propriété<SUB>2</SUB></FONT>:
+                                                        <FONT COLOR="#2323dc">valeur<SUB>2</SUB></FONT>;
+                                                        <BR/>
+                                                        ...
+                                                        <BR/>
+                                                        <FONT COLOR="#ff0000">propriété<SUB>N</SUB></FONT>
+                                                        : <FONT COLOR="#2323dc">valeur<SUB>N</SUB></FONT>;
+                                                        <BR/>
+                                                        }
+                                                        </P>
+                                                        <P>
+                                                        <FONT COLOR="#00ae00">selecteur</FONT> :
+                                                        la balise HTML à laquelle on souhaite appliquer la propriété</P>
+                                                        <P>
+                                                        <FONT COLOR="#ff0000">propriété</FONT>
+                                                        : la propriété</P>
+                                                        <P><FONT COLOR="#2323dc">
+                                                            valeur</FONT>
+                                                        : la valeur que l'on souhaite donner à la propriété</P>
+                                                        <P>On trouve facilement sur le Web la liste des
+                                                        propriétés et des valeurs (par exemple
+                                                        <A HREF="http://www.siteduzero.com/informatique/tutoriels/apprenez-a-creer-votre-site-web-avec-html5-et-css3/memento-1" target="blank">le site du Zéro</A> ou le site spécialisé <A HREF="http://www.css-faciles.com/proprietes-css-familles.php" target="blank">css-faciles</A>)</P>
+
+                                                    </div>
+
+                                                    <P>Vous modifierez le fichier CSS (et
+                                                    uniquement ce fichier) pour obtenir la présentation suivante. Il
+                                                    vous sera nécessaire de rechercher dans le lien précédant les
+                                                    propriétés et valeurs associées nécessaires.</P>
+
+                                                    <p>En sachant que</P>
+                                                    <UL>
+                                                        <LI>le titre <I>H1</I>
+                                                            est écrit en <I>Arial Black</I>
+                                                            et dans la plus grande taille de fonte</LI>
+                                                        <LI>le titre <I>H2 </I> est
+                                                            écrit en fonte de taille moyenne</LI>
+                                                        <LI>l'espace entre deux paragraphes
+                                                            vaut une demi-taille de ligne.</LI>
+                                                    </UL>
+
+                                                    <IMG SRC="TD-Sites-Web_html_f39c458.gif" NAME="images12" ALIGN=CENTER WIDTH=100% BORDER=0/>
+
+                                                    <!--    <P>Une solution est <A HREF="http://atoum.imag.fr/geta/User/didier.schwab/IUT/style-poss1.css">ici</A>
+                                                     et une seconde<A HREF="http://atoum.imag.fr/geta/User/didier.schwab/IUT/style-poss2.css"> là</A></P>-->
+
+                                                    <div class="visu">
+                                                        <H3>En savoir plus</H3>
+                                                        <P>
+                                                        L'idée des CSS date de 1994, leurs
+                                                        premières spécifications officielles datent de 1996-1998 mais il
+                                                        faut attendre 2006 pour qu'<I>Internet Explorer</I> (qui
+                                                        équipe alors environ 90% des machines) ne sache les interpréter
+                                                        correctement.</P>
+
+                                                        </div>
+                                                        <UL>
+                                                            <LI>Rajouter à gauche la photo de
+                                                                Victor Hugo que l'on trouve sur le site de Wikipedia. Elle doit
+                                                                rester au même endroit de la fenêtre même si on fait défiler le
+                                                                poème.</LI>
+                                                        </UL>
+
+
+                                                    <H1>Les CSS dans Weebly</H1>
+                                                    <UL>
+                                                        <P>Weebly nous offre une bonne centaine
+                                                        de masques différents ce qui est largement suffisant pour une
+                                                        utilisation personnelle simple mais insuffisant pour une utilisation
+                                                        professionnelle. En effet, le site Web d'une entreprise doit
+                                                        refléter son identité graphique. Il va ainsi falloir que nous
+                                                        modifions les CSS de notre site pour obtenir le résultat attendu.</P>
+                                                        <LI>Dans Weebly, en mode édition
+                                                            du site, onglet <I>conception</I>
+                                                            <LI>Cliquez sur<I>
+                                                                Modifier HTML/CSS</I></LI>
+                                                            <LI>Modifiez
+                                                                la CSS de telle sorte que l'image que l'on trouve <A HREF="http://static2.grsites.com/archive/textures/water/water020.gif" target="blank">ici</A>
+                                                                se répète dans le fond de la page.
+                                                            </LI>
+                                                            </UL>
+
+                                                    C'est beau non ?
+
+                                                    <div class="visu">
+                                                        <H3>En savoir plus</H3>
+                                                        <P>
+                                                        De nos jours, il existe une grande variété d'écrans (des
+                                                        téléphones portable aux très grands écrans d'ordinateur) sur
+                                                        lesquels on peut visualiser les pages Web. Leur définition est
+                                                        exprimée en pixels qui sont les points sur l'écran qui affichent
+                                                        une couleur.</P>
+                                                        <P>La
+                                                        taille de l'écran (c-à-d. la longueur de sa diagonale) est
+                                                        exprimée, elle, en pouces (1 pouce (1&quot;) = 2,54cm), et n'est pas
+                                                        nécessairement en rapport avec le nombre de pixels d'un écran.
+                                                        Ainsi, les écrans des téléphones portables les plus récents ont
+                                                        bien plus de pixel qu'une télévision à <A HREF="http://fr.wikipedia.org/wiki/Tube_cathodique" target="blank">tube
+                                                            cathodique</A> : </P>
+                                                        <UL>
+                                                            <LI>
+                                                                Télévision à tube cathodique: 768 ×
+                                                                576 (nombre
+                                                                de pixels sur la ligne ×
+                                                                nombre sur la colonne);</LI>
+                                                            <LI>
+                                                                Téléphones
+                                                                <A HREF="http://fr.wikipedia.org/wiki/IPhone" target="blank">Iphone edge, 3G, 3GS</A> (3,5&quot; ; 480 × 320) <A HREF="http://fr.wikipedia.org/wiki/IPhone" target="blank">Iphone 4 & 4S</A> (3,5&quot; ; 640 ×
+                                                                    960) ; <A HREF="http://fr.wikipedia.org/wiki/Samsung_i9000_Galaxy_S" target="blank">Samsung i9000 Galaxy S<A>, <A HREF="http://fr.wikipedia.org/wiki/Samsung_i9100_Galaxy_S_II" target="blank">Samsung i9100 Galaxy S II</A> (4&quot; ; 480 × 800) ;</LI>
+                                                            <LI>
+                                                                Tablettes Apple <A HREF="http://fr.wikipedia.org/wiki/IPad" target="blank"> Ipad </A>
+                                                                (9,7&quot; ; 1024 × 768 puis 2 048 × 1 536), <A HREF="http://fr.wikipedia.org/wiki/Samsung_Galaxy_Tab" target="blank">Samsung Galaxy Tab 10.1 </A>(10,1&quot; ; 1024×600 et 1280×800),
+                                                                <A HREF="http://en.wikipedia.org/wiki/Archos#Generation_9" target="blank">Archos G9</A> (10,1&quot; ; 1280*800)</LI>
+                                                            <LI>
+                                                                Télévisions haute définition
+                                                                (1920 × 1080)</LI>
+                                                            <LI>	Moniteurs d'ordinateur (jusqu'à
+                                                                2 560 × 1 440)</LI>
+                                                            <P>
+                                                            Wikipedia présente ce récapitulatif des principales
+                                                            tailles d'écrans actuels exprimée en pixels</P>
+
+                                                            <IMG SRC="http://upload.wikimedia.org/wikipedia/commons/e/e5/Vector_Video_Standards2.svg" NAME="images13" ALIGN=CENTER WIDTH=100% BORDER=0/>
+
+                                                            </DIV>
+
+                                                    <div class="visu">
+                                                        <H3>En savoir plus</H3>
+                                                    <P>
+                                                   Le W3C (<A HREF="http://fr.wikipedia.org/wiki/World_Wide_Web_Consortium" target="blank"><I>World
+                                                            Wide Web Consortium</I></A>),
+                                                                créé en 1994 par Tim Berner-Lee est l'organisme chargé de définir
+                                                                les standards du Web (HTML, CSS, <A HREF="http://fr.wikipedia.org/wiki/Extensible_Markup_Language" target="blank">XML</A>,
+                                                                <A HREF="http://fr.wikipedia.org/wiki/SVG" target="blank">SVG</A>,...).
+                                                                    Ces standards sont dits libres (ou <A HREF="http://fr.wikipedia.org/wiki/Format_ouvert" target="blank"> ouverts </A>)
+                                                                        c'est-à-dire que leurs spécifications techniques sont publiques et
+                                                                        sans restriction d'accès ni de mise en œuvre.</P>
+                                                    <P>
+                                                    Certains formats dits propriétaires (ou <A HREF="http://fr.wikipedia.org/wiki/Format_fermé" target="blank">fermés</A>)
+                                                            pourtant très utilisés ne font pas partie des <A HREF="http://fr.wikipedia.org/wiki/Standards_du_Web" target="blank">standards
+                                                                du Web</A>.
+                                                                    Dans ce cas, pour pouvoir fabriquer un logiciel capable de les lire,
+                                                                    il faut payer une redevance. C'est le cas des fichiers <A HREF="http://fr.wikipedia.org/wiki/ZIP_(format_de_fichier) target="blank"">zip</A>
+                                                                        ou du <A HREF="http://fr.wikipedia.org/wiki/Adobe_Flash" target="blank">Flash</A>
+                                                                            par exemple. C'est d'ailleurs pourquoi il est contesté par les promoteurs de l'informatique libre (voir <A HREF="http://www.april.org/fr/pas-de-flash" target="blank">la position de l'April</A>). C'est également une des raisons avancée par Apple qui refuse de permettre son installation sur ses terminaux mobiles.</P>
+                                                        </div>
+
+                                                        <H1>Webographie</H1>
+                                                    <P>
+                                                    <SPAN STYLE="font-style: normal">Internet
+                                                    </SPAN><A HREF="http://fr.wikipedia.org/wiki/Internet"><SPAN STYLE="font-style: normal">http://fr.wikipedia.org/wiki/Internet</SPAN></A></P>
+                                                    <P>
+                                                    <SPAN STYLE="font-style: normal">Histoire d'Internet
+                                                    </SPAN><A HREF="http://fr.wikipedia.org/wiki/Histoire_d'Internet">http://fr.wikipedia.org/wiki/Histoire_d'Internet</A></P>
+                                                    <P>
+                                                    <SPAN STYLE="font-style: normal">Le Web
+                                                    </SPAN><A HREF="http://fr.wikipedia.org/wiki/World_Wide_Web"><SPAN STYLE="font-style: normal">http://fr.wikipedia.org/wiki/World_Wide_Web</SPAN></A></P>
+                                                    <P LANG="zxx" ALIGN=JUSTIFY STYLE="margin-top: 0.2cm; margin-bottom: 0.2cm; font-style: normal">
+                                                    L'informatique au CERN</P>
+                                                    <P>
+                                                    <A HREF="http://fr.wikipedia.org/wiki/Organisation_européenne_pour_la_recherche_nucléaire#Informatique_au_CERN"><SPAN STYLE="font-style: normal">http://fr.wikipedia.org/wiki/Organisation_européenne_pour_la_recherche_nucléaire#Informatique_au_CERN</SPAN></A></P>
+                                                    <P>
+                                                    <SPAN STYLE="font-style: normal">Comparatif navigateurs : qui est le
+                                                        meilleur ?
+                                                    </SPAN><A HREF="http://www.clubic.com/article-282232-1-comparatif-internet-explorer-firefox-opera-safari.html"><SPAN STYLE="font-style: normal">http://www.clubic.com/article-282232-1-comparatif-internet-explorer-firefox-opera-safari.html</SPAN></A><SPAN STYLE="font-style: normal">
+                                                    </SPAN>
+                                                    </P>
+                                                    <P>
+                                                    <SPAN STYLE="font-style: normal">Part de marché des navigateurs
+                                                    </SPAN><A HREF="http://gs.statcounter.com/"><SPAN STYLE="font-style: normal">http://gs.statcounter.com/</SPAN></A></P>
+                                                    <P>
+                                                    <SPAN STYLE="font-style: normal">Le langage HTML
+                                                    </SPAN><A HREF="http://fr.wikipedia.org/wiki/Hypertext_Markup_Language"><SPAN STYLE="font-style: normal">http://fr.wikipedia.org/wiki/Hypertext_Markup_Language</SPAN></A></P>
+                                                    <P>
+                                                    <SPAN STYLE="font-style: normal">Tutorial sur le HTML
+                                                    </SPAN><A HREF="http://fr.html.net/tutorials/html/"><SPAN STYLE="font-style: normal">http://fr.html.net/tutorials/html/</SPAN></A></P>
+                                                    <P>
+                                                    <SPAN STYLE="font-style: normal">Les couleurs du Web
+                                                    </SPAN><A HREF="http://fr.wikipedia.org/wiki/Couleurs_du_Web"><SPAN STYLE="font-style: normal">http://fr.wikipedia.org/wiki/Couleurs_du_Web</SPAN></A><SPAN STYLE="font-style: normal">
+                                                    </SPAN>
+                                                    </P>
+                                                    <P>
+                                                    <SPAN STYLE="font-style: normal">Les attributs en HTML
+                                                    </SPAN><A HREF="http://fr.selfhtml.org/html/reference/attributs.htm"><SPAN STYLE="font-style: normal">http://fr.selfhtml.org/html/reference/attributs.htm</SPAN></A></P>
+                                                    <P LANG="zxx" ALIGN=JUSTIFY STYLE="margin-top: 0.2cm; margin-bottom: 0.2cm; font-style: normal">
+                                                    Les systèmes de gestion de contenu
+                                                    </P>
+                                                    <P>
+                                                    <SPAN STYLE="font-style: normal">Les feuilles de style en cascade
+                                                        (css) </SPAN><A HREF="http://fr.selfhtml.org/css/"><SPAN STYLE="font-style: normal">http://fr.selfhtml.org/css/</SPAN></A></P>
+                                                    <P>
+                                                    <SPAN STYLE="font-style: normal">Tutoriel CSS
+                                                    </SPAN><A HREF="http://fr.html.net/tutorials/css/"><SPAN STYLE="font-style: normal">http://fr.html.net/tutorials/css/</SPAN></A></P>
+                                                    <P>
+                                                    <SPAN STYLE="font-style: normal">Liste des propriétés CSS
+                                                    </SPAN><A HREF="http://www.siteduzero.com/tutoriel-3-13639-liste-des-proprietes-css.html"><SPAN STYLE="font-style: normal">http://www.siteduzero.com/tutoriel-3-13639-liste-des-proprietes-css.html</SPAN></A><SPAN STYLE="font-style: normal">
+                                                    </SPAN>
+                                                    </P>
+                                                    <P>
+                                                    <SPAN STYLE="font-style: normal">Faits marquants css (en anglais)
+                                                    </SPAN><A HREF="http://webilus.fr/illustration/histoire-et-faits-marquants-sur-les-css"><SPAN STYLE="font-style: normal">http://webilus.fr/illustration/histoire-et-faits-marquants-sur-les-css</SPAN></A><SPAN STYLE="font-style: normal">
+                                                    </SPAN>
+                                                    </P>
+                                                    <P>
+                                                    <SPAN STYLE="font-style: normal">Interview sur la création des css
+                                                        et le W3C
+                                                    </SPAN><A HREF="http://www.gralon.net/articles/internet-et-webmaster/creation-site-internet/article-interview-de-bert-bos---histoire-et-evolutions-du-css-988.htm"><SPAN STYLE="font-style: normal">http://www.gralon.net/articles/internet-et-webmaster/creation-site-internet/article-interview-de-bert-bos---histoire-et-evolutions-du-css-988.htm</SPAN></A><SPAN STYLE="font-style: normal">
+                                                    </SPAN>
+                                                    </P>
+                                                    <P>
+                                                    <SPAN STYLE="font-style: normal">Site Web du W3C </SPAN><A HREF="http://www.w3.org/"><SPAN STYLE="font-style: normal">http://www.w3.org/</SPAN></A></P>
+                                                    <P>
+                                                    CSS zen garden : le même site à travers un certain nombre d'exemple de css <A HREF="http://www.csszengarden.com" target="_Blank">http://www.csszengarden.com</A>
+                                                    </P>
+
+                                                    </BODY>
+</HTML>

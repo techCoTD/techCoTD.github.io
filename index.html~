@@ -1,0 +1,35 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+    <HEAD>
+        <META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=utf-8">
+            <TITLE>Bienvenue sur le site Web de l'enseignement d'informatique du S4 - IUT2 Grenoble</TITLE>
+            <META NAME="GENERATOR" CONTENT="LibreOffice 3.4  (Unix)">
+                <META NAME="AUTHOR" CONTENT="Didier Schwab">
+                    <META NAME="CREATED" CONTENT="20111212;10362100">
+                        <META NAME="CHANGEDBY" CONTENT="Didier Schwab">
+                            <META NAME="CHANGED" CONTENT="20111212;16283600">
+                                <link type="text/css" rel="stylesheet" href="style-cours-TC-IUT2.css" />
+    </HEAD>
+    <BODY LANG="fr-FR" DIR="LTR">
+        <Title>Informatique
+            semestre 4</Title>
+        <Subtitle>Techniques de commercialisation<BR/>
+            IUT2-Grenoble
+        </Subtitle>
+        <Subtitle>Semestre 4<BR/>
+            2016-2017<BR/></Subtitle>
+        <BR/>
+        <BR/>
+        <BR/>
+        <H2>Cours 1 et 2 : <BR/> <A HREF="TD-Sites-Web.html">Création de Sites Web</A></H2>
+        <H2>Cours 3 : <BR/> <A HREF="Consignes-CE-Writer.html">Traitements de Texte avancé
+            </A></H2>
+        <H2>Cours 4 : <BR/> <A HREF="PAO.html">Publication Assistée par Ordinateur
+            </A></H2>
+        <H2>Cours 5 : <BR/> Projet</H2>
+        
+        <H2><A HREF="consignes-evaluation.html">Consignes évaluation<A></H2>
+        
+        <H3>La charte graphique de ce site essaye de faciliter la lecture à l'écran (polices de caractères choisies, nombre de caractères par ligne, couleurs,...)</H3>
+    </BODY>
+</HTML>

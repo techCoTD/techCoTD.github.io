@@ -12,12 +12,12 @@
     </HEAD>
     <BODY LANG="fr-FR" DIR="LTR">
         <Title>Informatique
-            semestre 4</Title>
+           </Title>
         <Subtitle>Techniques de commercialisation<BR/>
             IUT2-Grenoble
         </Subtitle>
-        <Subtitle>Semestre 4<BR/>
-            2016-2017<BR/></Subtitle>
+        <Subtitle>
+            2017-2018<BR/></Subtitle>
         <BR/>
         <BR/>
         <BR/>
@@ -28,7 +28,7 @@
             </A></H2>
         <H2>Cours 5 : <BR/> Projet</H2>
         
-        <H2><A HREF="consignes-evaluation.html">Consignes évaluation<A></H2>
+        <H2><A HREF="consignes-evaluation">Consignes évaluation<A></H2>
         
         <H3>La charte graphique de ce site essaye de faciliter la lecture à l'écran (polices de caractères choisies, nombre de caractères par ligne, couleurs,...)</H3>
     </BODY>

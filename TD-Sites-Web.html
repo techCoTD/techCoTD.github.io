@@ -723,6 +723,128 @@
 
 
 
+<section id="tp-lovable-supabase" class="tp-section">
+  <h2>Partie 1 (version “copier-coller”, resserrée et prête à l’emploi)</h2>
+
+  <h3>TP – Créer un site Web no-code avec Lovable + collecte de données via Supabase</h3>
+  <p><strong>Ressources &amp; culture numérique 3 – BUT Tech de Co (2ᵉ année)</strong></p>
+
+  <h4>Objectifs pédagogiques</h4>
+  <p>À l’issue du TP, vous serez capable de :</p>
+  <ul>
+    <li>Créer et publier un mini-site avec <strong>Lovable</strong> à partir d’un <strong>prompt</strong> affiné avec <strong>ChatGPT</strong>.</li>
+    <li>Concevoir un <strong>formulaire</strong> (réservation/contact) et préparer sa <strong>connexion</strong> à <strong>Supabase</strong>.</li>
+    <li>Vérifier l’enregistrement des données et raisonner <strong>RGPD</strong> (données minimales, consentement, tests fictifs).</li>
+  </ul>
+
+  <h4>Organisation</h4>
+  <ul>
+    <li><strong>Durée</strong> : 1 séance (≈ 90–120 min).</li>
+    <li><strong>Travail</strong> : individuel ou binôme.</li>
+    <li><strong>Sujet</strong> : site Web d’une <strong>pizzeria</strong> avec <strong>réservation en ligne</strong> (formulaire obligatoire).</li>
+    <li><strong>Rappels</strong> : utilisez <strong>des données fictives</strong> ; soignez <strong>lisibilité mobile</strong> et <strong>contrastes</strong>.</li>
+  </ul>
+
+  <hr>
+
+  <h2>Partie 1 — Du premier site au site “complet” via prompt ChatGPT → Lovable</h2>
+
+  <h3>1. Créer un compte Lovable (5–10 min)</h3>
+  <ol>
+    <li>Aller sur <code>lovable.app</code>.</li>
+    <li>Créer un compte ou se connecter.</li>
+    <li>Dans le tableau de bord, cliquer <strong>Create new</strong>.</li>
+  </ol>
+  <p><strong>Checkpoint A (à montrer)</strong></p>
+  <ul>
+    <li>Capture du <strong>dashboard</strong> Lovable avec le <strong>nom du projet</strong>.</li>
+    <li><strong>URL</strong> interne/provisoire si présente.</li>
+  </ul>
+
+  <hr>
+
+  <h3>2. Générer un site “1-page” rapide et le publier (10–15 min)</h3>
+  <ol>
+    <li>Choisir la <strong>génération rapide</strong> (landing 1 page).</li>
+    <li>Renseigner <strong>titre</strong> + <strong>courte description</strong> (ex. « Pizzeria Lov’Pizza – réservations en ligne »).</li>
+    <li>Cliquer <strong>Generate</strong> puis <strong>Publish</strong> (URL publique).</li>
+  </ol>
+  <p><strong>Checkpoint B (à montrer)</strong></p>
+  <ul>
+    <li><strong>URL publique</strong> de la 1ʳᵉ version (+ capture du héros/CTA).</li>
+  </ul>
+
+  <hr>
+
+  <h3>3. Préparer un <strong>prompt complet</strong> avec ChatGPT (25–35 min)</h3>
+  <p><strong>Objectif</strong> : obtenir un <strong>prompt final</strong> prêt à coller dans Lovable (pages, style, contenus, <strong>formulaire</strong>, SEO, accessibilité).</p>
+  <p><strong>Collez ce canevas dans ChatGPT puis itérez</strong> — adaptez les parties entre crochets :</p>
+
+  <blockquote>
+    <p><strong>Rôle</strong> : Tu es concepteur·ice no-code expert·e Lovable.</p>
+    <p><strong>But</strong> : Générer un site Web <strong>en français</strong>, style <strong>italien traditionnel</strong>, ton <strong>léger/humoristique</strong>, <strong>responsive</strong> (mobile &amp; desktop).</p>
+    <p><strong>Pages</strong> : Accueil (héros + CTA « Réserver maintenant »), Menu (classiques + originales), Réservation (formulaire), Notre histoire, Contact (adresse, horaires, plan, réseaux).</p>
+    <p><strong>Formulaire (obligatoire) → <u>noms de champs EXACTS</u> (prépa Supabase)</strong> :</p>
+    <ul>
+      <li><code>first_name</code> (Prénom, requis)</li>
+      <li><code>last_name</code> (Nom, requis)</li>
+      <li><code>email</code> (Email, requis, format email)</li>
+      <li><code>phone</code> (Téléphone, optionnel)</li>
+      <li><code>date</code> (Date, requis)</li>
+      <li><code>time</code> (Heure, requis)</li>
+      <li><code>party_size</code> (Nombre de personnes, requis, ≥1)</li>
+      <li><code>message</code> (Message libre, optionnel)</li>
+      <li><code>consent</code> (case à cocher RGPD, requis)</li>
+    </ul>
+    <p><strong>Validation</strong> : bloquer l’envoi si requis non rempli ou consent non coché.</p>
+    <p><strong>Succès</strong> : afficher un <strong>message de confirmation</strong> clair avec <strong>récapitulatif</strong> des infos.</p>
+    <p><strong>Design</strong> : palette rouge/vert/basilic, textures papier, icônes pizza, CTA visibles.</p>
+    <p><strong>Accessibilité</strong> : textes alternatifs, taille de police lisible, contrastes suffisants, navigation clavier OK.</p>
+    <p><strong>SEO</strong> : meta title/description FR, H1/H2 cohérents, URLs propres.</p>
+    <p><strong>Sortie attendue</strong> : un <strong>prompt Lovable final</strong> (sections + contenus) <strong>prêt à coller</strong>, puis une <strong>checklist</strong> de vérification (pages, formulaire, CTA, SEO, accessibilité).</p>
+  </blockquote>
+
+  <p><strong>Conseils d’itération</strong></p>
+  <ul>
+    <li>Demander 2–3 variantes de sections (héros, menu) et <strong>fusionner</strong> vos préférées.</li>
+    <li>Ajuster le <strong>ton</strong> (plus pro / plus drôle) jusqu’à satisfaction.</li>
+    <li>Vérifier que les <strong>noms des champs</strong> du formulaire sont <strong>exactement</strong> ceux listés ci-dessus.</li>
+  </ul>
+
+  <p><strong>Checkpoint C (à montrer)</strong></p>
+  <ul>
+    <li><strong>Prompt final</strong> (copier-coller) + 3 captures (héros, menu, page <strong>Réservation</strong>).</li>
+  </ul>
+
+  <hr>
+
+  <h3>4. Coller le prompt dans Lovable et publier le site “complet” (20–30 min)</h3>
+  <ol>
+    <li>Dans Lovable, créer un <strong>nouveau site “from prompt”</strong> et <strong>coller</strong> le prompt final.</li>
+    <li>Vérifier / ajuster les sections et textes.</li>
+    <li><strong>Confirmer la présence du formulaire</strong> avec les <strong>noms de champs</strong> définis.</li>
+    <li><strong>Publish</strong> (URL publique).</li>
+  </ol>
+  <p><strong>Checkpoint D (à montrer)</strong></p>
+  <ul>
+    <li><strong>URL publique</strong> du site complet + capture du <strong>formulaire</strong> affiché.</li>
+  </ul>
+
+  <hr>
+
+  <h3>(Optionnel, 5 min) Mini-check RGPD &amp; accessibilité</h3>
+  <ul>
+    <li>Mention sous le formulaire : <em>« Données de démonstration pour un TP. Les informations sont utilisées uniquement pour simuler une réservation. »</em></li>
+    <li>Vérifier lisibilité mobile + alt-text sur les images.</li>
+  </ul>
+</section>
+
+
+
+
+
+        
+
                                                     <div class="visu">
                                                         <H3>En savoir plus</H3>
                                                         <P>

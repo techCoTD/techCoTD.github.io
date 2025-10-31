@@ -800,62 +800,10 @@
   <h3>3. Préparer un <strong>prompt complet</strong> avec ChatGPT/Gemini (25–35 min)</h3>
   <p><strong>Objectif</strong> : obtenir un <strong>prompt final</strong> prêt à coller dans Lovable (pages, style, contenus, <strong>formulaire</strong>, SEO, accessibilité, <strong>connexion Lovable Cloud</strong>).</p>
   <p><strong>Collez ce canevas dans votre IA conversationnelle puis itérez</strong> — adaptez les parties entre crochets :</p>
-
-  <blockquote>
-    <p><strong>Rôle</strong> : Tu es concepteur·ice no-code expert·e Lovable.</p>
-    <p><strong>But</strong> : Générer un site Web <strong>en français</strong>, style <strong>italien traditionnel</strong>, ton <strong>léger/humoristique</strong>, <strong>responsive</strong> (mobile &amp; desktop).</p>
-    <p><strong>Pages</strong> : Accueil, Menu (classiques + originales), Réservation (formulaire), Notre histoire, Contact (adresse, horaires, plan, réseaux).</p>
-    <p><strong>Formulaire (obligatoire) → <u>noms de champs EXACTS</u></strong> :</p>
-    <ul>
-      <li><code>first_name</code> (Prénom, requis)</li>
-      <li><code>last_name</code> (Nom, requis)</li>
-      <li><code>email</code> (Email, requis, format email)</li>
-      <li><code>phone</code> (Téléphone, optionnel)</li>
-      <li><code>date</code> (Date, requis)</li>
-      <li><code>time</code> (Heure, requis)</li>
-      <li><code>party_size</code> (Nombre de personnes, requis, ≥1)</li>
-      <li><code>message</code> (Message libre, optionnel)</li>
-      <li><code>consent</code> (case à cocher RGPD, requis)</li>
-    </ul>
-    <p><strong>Validation</strong> : bloquer l’envoi si requis non rempli ou consent non coché. Afficher un <strong>message de confirmation</strong> avec <strong>récapitulatif</strong>.</p>
-
-    <p><strong>Lovable Cloud (base de données)</strong> :</p>
-    <ul>
-      <li><strong>Activer</strong> Lovable Cloud et <strong>créer la table</strong> <code>reservations</code> (schéma ci-dessous).</li>
-      <li><strong>Connecter</strong> le formulaire pour insérer une ligne à chaque réservation.</li>
-      <li><strong>Autoriser</strong> les connexions/permissions proposées par l’assistant (policies par défaut convenables en TP).</li>
-    </ul>
-
-    <pre><code>// Schéma proposé (SQL)
-create table if not exists public.reservations (
-  id uuid primary key default gen_random_uuid(),
-  first_name text not null,
-  last_name  text not null,
-  email      text not null check (email ~* '^[^@\\s]+@[^@\\s]+\\.[^@\\s]+$'),
-  phone      text,
-  date       date not null,
-  time       time not null,
-  party_size int  not null check (party_size &gt;= 1),
-  message    text,
-  consent    boolean not null default false,
-  created_at timestamptz not null default now()
-);
-</code></pre>
-
-    <p><strong>Design</strong> : palette rouge/vert/basilic, textures papier, icônes pizza, CTA visibles.</p>
-    <p><strong>Accessibilité</strong> : alt-text, police lisible, contrastes AA, navigation clavier.</p>
-    <p><strong>SEO</strong> : meta title/description FR, H1/H2 cohérents, URLs propres.</p>
-
-    <p><strong>Sortie attendue</strong> : 1) <strong>Prompt Lovable final prêt à coller</strong> (sections + contenus + Cloud + table) ; 2) <strong>Checklist</strong> (pages, formulaire, CTA, SEO, accessibilité, Cloud connecté).</p>
-
-    <p><strong>Important</strong> : N’hésite pas à me poser des questions si une info manque avant de générer le prompt final.</p>
-  </blockquote>
-
   <p><strong>Conseils d’itération</strong></p>
   <ul>
     <li>Demander 2–3 variantes (héros/menu) et <strong>fusionner</strong> vos préférées.</li>
     <li>Ajuster le <strong>ton</strong> (plus pro / plus drôle) jusqu’à satisfaction.</li>
-    <li>Re-vérifier les <strong>noms de champs</strong> (exactitude cruciale pour l’insertion en base).</li>
   </ul>
 
   <p><strong>Checkpoint C (à montrer)</strong></p>

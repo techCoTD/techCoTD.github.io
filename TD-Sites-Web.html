@@ -726,6 +726,196 @@
 
   <!-- ===================== PRÉAMBULE EN EXERGUE ===================== -->
   <aside class="exergue" style="border:2px solid #c00;padding:1rem;border-radius:12px;background:#fffaf8;">
+    <h1>TP : Créer un site no-code avec Lovable + base de données (Lovable Cloud)</h1>
+
+    <p><strong>Vide coding (IA-assisté)</strong> : on conçoit une appli/website en décrivant l’objectif et les contraintes à une IA
+      qui <em>génère</em> le code/les écrans. Exemples : <strong>Lovable</strong> (site + DB + déploiement), <strong>Bolt</strong> (apps/sites
+      full-stack par prompts). On parle aussi de <em>AI app builders</em> ou <em>prompt-to-app</em>.</p>
+
+    <p><strong>Crédits Lovable</strong> : en <u>novembre 2025</u>, la plateforme fonctionne avec des crédits (environ
+      <strong>5/jour</strong> selon le plan). Utilisez-les avec parcimonie (préparez bien vos prompts
+      <em>avant</em> de cliquer).</p>
+
+    <p><strong>Astuce</strong> : rédigez vos prompts dans une IA conversationnelle (p. ex. <em>ChatGPT</em> ou <em>Gemini</em>) pour
+      obtenir un <em>super-prompt Lovable</em> en 1–2 itérations, au lieu de brûler des crédits dans Lovable.</p>
+
+    <details>
+      <summary><strong>Comment fabriquer un bon prompt (IA conversationnelle)</strong></summary>
+      <ul>
+        <li><strong>Rôle</strong> clair (ex. « Tu es un concepteur no-code expert Lovable »).</li>
+        <li><strong>But</strong> concret (ex. « Pizzeria FR + réservation en ligne, ton léger »).</li>
+        <li><strong>Contraintes</strong> (pages, champs du formulaire <em>noms exacts</em>, palette, SEO, accessibilité).</li>
+        <li><strong>Process</strong> : demande-lui <em>explicitement</em> de te poser des questions s’il manque des infos,
+          de proposer 2–3 variantes par section, puis de <strong>fusionner</strong> la version finale.</li>
+        <li><strong>Sortie attendue</strong> : « Donne-moi un <em>prompt Lovable final prêt à coller</em> + une checklist ».</li>
+      </ul>
+      <p style="margin:.5rem 0 0"><em>Tip</em> : si vous atteignez la limite de crédits, vous pouvez <strong>créer un nouveau compte</strong> pour finir le TP (à n’utiliser qu’en TP/maquette).</p>
+    </details>
+  </aside>
+
+  <h4>Objectifs pédagogiques</h4>
+  <p>À l’issue du TP, vous serez capable de :</p>
+  <ul>
+    <li>Créer et publier un mini-site avec <strong>Lovable</strong> à partir d’un <strong>prompt</strong> affiné avec <strong>ChatGPT/Gemini</strong>.</li>
+    <li>Concevoir un <strong>formulaire</strong> (réservation/contact) et le connecter à <strong>Lovable Cloud</strong> (base de données).</li>
+    <li>Vérifier l’enregistrement des données et raisonner <strong>RGPD</strong> (données minimales, consentement, tests fictifs).</li>
+  </ul>
+
+  <h4>Organisation</h4>
+  <ul>
+    <li><strong>Durée</strong> : 1 séance (≈ 90–120 min).</li>
+    <li><strong>Travail</strong> : individuel ou binôme.</li>
+    <li><strong>Sujet</strong> : site Web d’une <strong>pizzeria</strong> avec <strong>réservation en ligne</strong> (formulaire obligatoire).</li>
+    <li><strong>Rappels</strong> : utilisez <strong>des données fictives</strong> ; soignez <strong>lisibilité mobile</strong> et <strong>contrastes</strong>.</li>
+  </ul>
+
+  <hr>
+
+  <h2>Partie 1 — Du premier site au site “complet” via prompt ChatGPT → Lovable</h2>
+
+  <h3>1. Créer un compte Lovable (5–10 min)</h3>
+  <ol>
+    <li>Aller sur <code>lovable.app</code>.</li>
+    <li>Créer un compte ou se connecter. <em>Option</em> : si vous avez épuisé vos crédits, vous pouvez créer un
+      second compte pour terminer l’exercice (usage pédagogique).</li>
+  </ol>
+
+  <hr>
+
+  <h3>2. Générer un site “1-page” rapide et le publier (10–15 min)</h3>
+  <ol>
+    <li>Choisir la <strong>génération rapide</strong> (landing 1 page).</li>
+    <li>Renseigner <strong>titre</strong> + <strong>courte description</strong> (ex. « Pizzeria Lov’Pizza – réservations en ligne »).</li>
+    <li><strong>Generate</strong> puis <strong>Publish</strong> (URL publique).</li>
+  </ol>
+  <p><strong>⚠️ Crédits</strong> : chaque génération consomme des crédits Lovable — regroupez vos demandes.</p>
+
+  <p><strong>Checkpoint 1 (à montrer)</strong></p>
+  <ul>
+    <li><strong>Site Web/URL publique</strong> de la 1ʳᵉ version.</li>
+  </ul>
+
+  <hr>
+
+  <h3>3. Préparer un <strong>prompt complet</strong> avec ChatGPT/Gemini (25–35 min)</h3>
+  <p><strong>Objectif</strong> : obtenir un <strong>prompt final</strong> prêt à coller dans Lovable (pages, style, contenus, <strong>formulaire</strong>, SEO, accessibilité, <strong>connexion Lovable Cloud</strong>).</p>
+  <p><strong>Collez ce canevas dans votre IA conversationnelle puis itérez</strong> — adaptez les parties entre crochets :</p>
+
+  <blockquote>
+    <p><strong>Rôle</strong> : Tu es concepteur·ice no-code expert·e Lovable.</p>
+    <p><strong>But</strong> : Générer un site Web <strong>en français</strong>, style <strong>italien traditionnel</strong>, ton <strong>léger/humoristique</strong>, <strong>responsive</strong> (mobile &amp; desktop).</p>
+    <p><strong>Pages</strong> : Accueil, Menu (classiques + originales), Réservation (formulaire), Notre histoire, Contact (adresse, horaires, plan, réseaux).</p>
+    <p><strong>Formulaire (obligatoire) → <u>noms de champs EXACTS</u></strong> :</p>
+    <ul>
+      <li><code>first_name</code> (Prénom, requis)</li>
+      <li><code>last_name</code> (Nom, requis)</li>
+      <li><code>email</code> (Email, requis, format email)</li>
+      <li><code>phone</code> (Téléphone, optionnel)</li>
+      <li><code>date</code> (Date, requis)</li>
+      <li><code>time</code> (Heure, requis)</li>
+      <li><code>party_size</code> (Nombre de personnes, requis, ≥1)</li>
+      <li><code>message</code> (Message libre, optionnel)</li>
+      <li><code>consent</code> (case à cocher RGPD, requis)</li>
+    </ul>
+    <p><strong>Validation</strong> : bloquer l’envoi si requis non rempli ou consent non coché. Afficher un <strong>message de confirmation</strong> avec <strong>récapitulatif</strong>.</p>
+
+    <p><strong>Lovable Cloud (base de données)</strong> :</p>
+    <ul>
+      <li><strong>Activer</strong> Lovable Cloud et <strong>créer la table</strong> <code>reservations</code> (schéma ci-dessous).</li>
+      <li><strong>Connecter</strong> le formulaire pour insérer une ligne à chaque réservation.</li>
+      <li><strong>Autoriser</strong> les connexions/permissions proposées par l’assistant (policies par défaut convenables en TP).</li>
+    </ul>
+
+    <pre><code>// Schéma proposé (SQL)
+create table if not exists public.reservations (
+  id uuid primary key default gen_random_uuid(),
+  first_name text not null,
+  last_name  text not null,
+  email      text not null check (email ~* '^[^@\\s]+@[^@\\s]+\\.[^@\\s]+$'),
+  phone      text,
+  date       date not null,
+  time       time not null,
+  party_size int  not null check (party_size &gt;= 1),
+  message    text,
+  consent    boolean not null default false,
+  created_at timestamptz not null default now()
+);
+</code></pre>
+
+    <p><strong>Design</strong> : palette rouge/vert/basilic, textures papier, icônes pizza, CTA visibles.</p>
+    <p><strong>Accessibilité</strong> : alt-text, police lisible, contrastes AA, navigation clavier.</p>
+    <p><strong>SEO</strong> : meta title/description FR, H1/H2 cohérents, URLs propres.</p>
+
+    <p><strong>Sortie attendue</strong> : 1) <strong>Prompt Lovable final prêt à coller</strong> (sections + contenus + Cloud + table) ; 2) <strong>Checklist</strong> (pages, formulaire, CTA, SEO, accessibilité, Cloud connecté).</p>
+
+    <p><strong>Important</strong> : N’hésite pas à me poser des questions si une info manque avant de générer le prompt final.</p>
+  </blockquote>
+
+  <p><strong>Conseils d’itération</strong></p>
+  <ul>
+    <li>Demander 2–3 variantes (héros/menu) et <strong>fusionner</strong> vos préférées.</li>
+    <li>Ajuster le <strong>ton</strong> (plus pro / plus drôle) jusqu’à satisfaction.</li>
+    <li>Re-vérifier les <strong>noms de champs</strong> (exactitude cruciale pour l’insertion en base).</li>
+  </ul>
+
+  <p><strong>Checkpoint C (à montrer)</strong></p>
+  <ul>
+    <li><strong>Prompt final</strong> (copier-coller) + 3 captures (héros, menu, page <strong>Réservation</strong>).</li>
+  </ul>
+
+  <hr>
+
+  <h3>4. Coller le prompt dans Lovable et publier le site “complet” (20–30 min)</h3>
+  <ol>
+    <li>Dans Lovable, créer un <strong>nouveau site “from prompt”</strong> et <strong>coller</strong> le prompt final.</li>
+    <li>Vérifier/ajuster les sections et textes.</li>
+    <li><strong>Confirmer</strong> la présence du formulaire avec les <strong>noms de champs</strong> définis.</li>
+    <li><strong>Activer Lovable Cloud</strong> (si besoin) : laisser Lovable <em>créer/configurer</em> la base et la table <code>reservations</code>.
+      <em>Accepter</em> les <strong>autorisations/connexions</strong> proposées (variables d’environnement, politiques par défaut, etc.).</li>
+    <li>Relier l’<strong>action du formulaire</strong> à l’<em>insertion</em> dans <code>reservations</code>.</li>
+    <li><strong>Publish</strong> (URL publique).</li>
+  </ol>
+
+  <p><strong>Checkpoint D (à montrer)</strong></p>
+  <ul>
+    <li><strong>URL publique</strong> du site complet + capture du <strong>formulaire</strong> affiché.</li>
+  </ul>
+
+  <hr>
+
+  <h3>5. Vérifier l’écriture en base (5–10 min)</h3>
+  <ol>
+    <li>Soumettre <em>une réservation fictive</em> (données de test).</li>
+    <li>Dans Lovable Cloud (ou le panneau base de données intégré), ouvrir la table <code>reservations</code> et vérifier la nouvelle ligne.</li>
+    <li>Si besoin, corriger le mapping des champs (form → colonnes) puis re-tester.</li>
+  </ol>
+
+  <h3>(Optionnel, 5 min) Mini-check RGPD &amp; accessibilité</h3>
+  <ul>
+    <li>Mention sous le formulaire : <em>« Données de démonstration pour un TP. Les informations sont utilisées uniquement pour simuler une réservation. »</em></li>
+    <li>Vérifier lisibilité mobile + alt-text sur les images.</li>
+  </ul>
+
+  <hr>
+
+  <h2>Annexe — Modèle de checklist finale</h2>
+  <ul>
+    <li>Pages : Accueil, Menu, Réservation, Notre histoire, Contact.</li>
+    <li>Formulaire : champs exacts (<code>first_name</code>, <code>last_name</code>, <code>email</code>, <code>phone</code>, <code>date</code>, <code>time</code>, <code>party_size</code>, <code>message</code>, <code>consent</code>), validations et message de succès.</li>
+    <li>Lovable Cloud : base créée, table <code>reservations</code> OK, insertion depuis le formulaire OK.</li>
+    <li>Accessibilité : alt-text, tabulation clavier, contrastes, tailles lisibles.</li>
+    <li>SEO : meta title/description FR, H1/H2 logiques, URLs propres.</li>
+    <li>Mobile : mise en page responsive, CTA visibles.</li>
+  </ul>
+
+</section>
+
+        
+
+<section id="tp-lovable-supabase" class="tp-section">
+
+  <!-- ===================== PRÉAMBULE EN EXERGUE ===================== -->
+  <aside class="exergue" style="border:2px solid #c00;padding:1rem;border-radius:12px;background:#fffaf8;">
     <h1>TP : Créer un site no-code avec Lovable + base de données (Lovable Cloud/Supabase)</h1>
 
     <p><strong>Vide coding (IA-assisté)</strong> : on conçoit une appli/website en décrivant l’objectif et les contraintes à une IA
